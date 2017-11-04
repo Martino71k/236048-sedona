@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Марк Кручинин](https://up.htmlacademy.ru/htmlcss/19/user/236048).
-* Наставник: [Григорий Гусаров] (https://htmlacademy.ru/profile/gogusarov).
+* Наставник: [Григорий Гусаров](https://htmlacademy.ru/profile/gogusarov).
 
 ---
 
