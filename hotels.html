@@ -1,101 +1,107 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-  </head>
-  <body>
-    <header class="header-page">
-          <nav class="main-navigation">
-            <a class="main-header-logo" href="/index.html">
-              <img src="img/index-logo.svg" width="100" height="100" alt="Логотип
-               Седона">
-            </a>
-          <ul>
-            <li><a href="info.html">Информация</a></li>
-            <li><a href="photo.html">Фото и видео</a></li>
-            <li><a href="map.html">Карта штата</a></li>
-            <li class="site-navigation-current"><a href="hotels">Гостиницы</a></li>
-          </ul>
-          </nav>
+</head>
+
+<body>
+    <header class="page-header">
+        <nav class="main-navigation">
+            <a class="main-logo">
+            <img src="img/index-logo.svg" width="100" height="100" alt="Логотип
+             Седона">
+          </a>
+            <ul class="menu">
+                <li class="menu-item"><a href="info.html">Информация</a></li>
+                <li class="menu-item"><a href="photo.html">Фото и видео</a></li>
+                <li class="menu-item"><a href="map.html">Карта штата</a></li>
+                <li class="menu-item menu-navigation-current"><a href="hotels.html">Гостиницы</a></li>
+            </ul>
+        </nav>
     </header>
+
+
     <main class="container">
         <h1 class="visually-hidden">Выбор гостиницы</h1>
         <section class="hotel-filter">
-          <h2 class="visually-hidden">Фильтр</h2>
-        <!--Тут будет форма, которую сказали пока не делать-->
+            <h2 class="visually-hidden">Фильтр</h2>
+            <div class="background-img-blur">
+                <!--Тут будет форма, которую сказали пока не делать-->
+            </div>
         </section>
-      <section class="hotel-results">
-        <div class="hotel-sort">
-          <h3>Найдено: 3</h3>
-          <ul class="hotel-sort-list">
-            <li>Сортировка:</li>
-            <li class="current-sort-item">По цене</li>
-            <li>По типу</li>
-            <li>По рейтингу</li>
-          </ul>
-          <span class="button-up">Кнопка вверх</span>
-          <span class="button-down">Кнопка вниз</span>
-        </div>
-        <div class="hotel-catalog">
-          <ul class="hotel-list">
-            <li class="hotel-item">
-              <h3>amara resort $ spa</h3>
-              <p class="hotel-photo"><img src="img/amara-picture.svg" width="130" height="100" alt="Гостиница Amara"></p>
-              <p class="hotel-type">Гостиница</p>
-              <p class="hotel-price">от 4000р.</p>
-              <span class="more-information-button">Подробнее</span>
-              <span class="reservation-button">Забронировать</span>
-              <span class="stars">4 Звезды</span>
-              <p class="rating">Рейтинг: 8,5</p>
-            </li>
-          </ul>
-           <ul class="hotel-list">
-            <li class="hotel-item">
-              <h3>Desert qual inn</h3>
-              <p class="hotel-photo"><img src="img/desert-quail-picture.svg" width="130" height="100" alt="Мотель Desert Quail"></p>
-              <p class="hotel-type">Мотель</p>
-              <p class="hotel-price">от 3000р.</p>
-              <span class="more-information-button">Подробнее</span>
-              <span class="reservation-button">Забронировать</span>
-              <span class="stars">3 Звезды</span>
-              <p class="rating">Рейтинг: 8,9</p>
-            </li>
-          </ul> 
-          <ul class="hotel-list">
-            <li class="hotel-item">
-              <h3>Villas at poco diablo</h3>
-              <p class="hotel-photo"><img src="img/villas-at-poco-picture.svg" width="130" height="100" alt="Апартаменты Villas at poco diablo"></p>
-              <p class="hotel-type">Апортаменты</p>
-              <p class="hotel-price">от 2000р.</p>
-              <span class="more-information-button">Подробнее</span>
-              <span class="reservation-button">Забронировать</span>
-              <span class="stars">2 Звезды</span>
-              <p class="rating">Рейтинг: 9,2</p>
-            </li>
-          </ul>
-
-        </div>
-      </section>
-
-
-      </main>
-      <footer class="page-footer">
-            <b>#visitsedona</b>
-            <div class="social-media">
-              <ul>
-                <li class="twitter"><a class="social-button" href="#">Твиттер</a></li>
-                <li class="facebook"><a class="social-button" href="#">Фейсбук</a></li>
-                <li class="youtube"><a class="social-buttin" href="#">Ютуб</a></li>
-              </ul>
+        <section class="hotel-results">
+            <div class="hotel-sort">
+                <h3 class="hotel-sort-title">Найдено: <span class='hotel-count'>3</span></h3>
+                <p class="hotel-sort-text">Сортировка:</p>
+                <ul class="hotel-sort-parameters">
+                    <li class="hotel-sort-item hotel-sort-item-current"><button>По цене</button></li>
+                    <li class="hotel-sort-item"><button>По типу</button></li>
+                    <li class="hotel-sort-item"><button>По рейтингу</button></li>
+                </ul>
+                <span class="sort-up">Кнопка вверх</span>
+                <span class="sort-down">Кнопка вниз</span>
             </div>
-            <div class="footer-copyright">
-              <a class="footer-copyright-link"
-              href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="html.logo" width="150" height="100" alt="Логотип
-              HTML academy">
+            <div class="hotel-catalog">
+                <ul class="hotel-list">
+                    <li class="hotel-item">
+                        <h3 class="hotel-item-title">amara resort & spa</h3>
+                        <p class="hotel-photo"><img src="img/amara-picture.svg" width="130" height="100" alt="Гостиница Amara"></p>
+                        <p class="hotel-type">Гостиница</p>
+                        <p class="hotel-price">от 4000р.</p>
+                        <p class="hotel-more-information"><a href="amara.html">Подробнее</a></p>
+                        <button>Забронировать</button>
+                        <p class="stars">4 Звезды</p>
+                        <p class="rating">Рейтинг: 8,5</p>
+                    </li>
+
+                    <li class="hotel-item">
+                        <h3 class="hotel-item-title">Desert qual inn</h3>
+                        <p class="hotel-photo"><img src="img/desert-quail-picture.svg" width="130" height="100" alt="Мотель Desert Quail"></p>
+                        <p class="hotel-type">Мотель</p>
+                        <p class="hotel-price">от 3000р.</p>
+                        <p class="hotel-more-information"><a href="desert.html">Подробнее</a></p>
+                        <button>Забронировать</button>
+                        <p class="stars">3 Звезды</p>
+                        <p class="rating">Рейтинг: 8,9</p>
+                    </li>
+
+                    <li class="hotel-item">
+                        <h3 class="hotel-item-title">Villas at poco diablo</h3>
+                        <p class="hotel-photo"><img src="img/villas-at-poco-picture.svg" width="130" height="100" alt="Апартаменты Villas at poco diablo"></p>
+                        <p class="hotel-type">Апортаменты</p>
+                        <p class="hotel-price">от 2000р.</p>
+                        <p class="hotel-more-information"><a href="villas.html">Подробнее</a></p>
+                        <button>Забронировать</button>
+                        <p class="stars">2 Звезды</p>
+                        <p class="rating">Рейтинг: 9,2</p>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+    </main>
+    <footer class="page-footer">
+        <div class="page-footer-item">
+            <p class="hashtag">#visitsedona</p>
+        </div>
+        <div class="page-footer-item">
+            <ul class="social-media">
+                <li class="social-media-item"><a class="twitter" href="#">Твиттер</a></li>
+                <li class="social-media-item"><a class="facebook" href="#">Фейсбук</a></li>
+                <li class="social-media-item"><a class="youtube" href="#">Ютуб</a></li>
+            </ul>
+        </div>
+        <div class="page-footer-item">
+            <p>website by</p>
+            <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+                    <img src="html.logo" width="150" height="100" alt="Логотип HTML academy">
               </a>
-            </div>
-      </footer>
-  </body>
+        </div>
+    </footer>
+</body>
+
 </html>
