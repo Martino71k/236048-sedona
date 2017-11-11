@@ -10,7 +10,7 @@
     <header class="page-header">
         <nav class="main-navigation">
             <a class="main-logo">
-            <img src="img/logo.png" width="100" height="100" alt="Логотип Седона">
+                <img src="img/logo.png" width="100" height="100" alt="Логотип Седона">
             </a>
             <ul class="menu">
                 <li class="menu-item"><a href="info.html">Информация</a></li>
@@ -38,7 +38,8 @@
                     <p class="reasons-number">№1</p>
                     <p class="reasons-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
                 </li>
-                <li class="photocard"><img src="img/reasons-img.jpg" alt="Изображение1" width="66">
+                <li class="photocard">
+                    <img src="img/reasons-img.jpg" alt="Изображение1" width="66">
                 </li>
             </ul>
 
@@ -63,7 +64,8 @@
                     <p class="reasons-number">№2</p>
                     <p class="reasons-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                 </li>
-                <li class="photocard"><img src="img/reasons-img(2).jpg" alt="Изображение2" width="66">
+                <li class="photocard">
+                    <img src="img/reasons-img(2).jpg" alt="Изображение2" width="66">
                 </li>
                 <li class="reasons-item">
                     <h3 class="reasons-title">Небольшая площадь</h3>
@@ -91,7 +93,6 @@
             <div class="bottom-map-block">
                 <img src="img/map.png" alt="Карта" width="100">
             </div>
-
         </section>
 
     </main>
@@ -101,21 +102,45 @@
         </div>
         <div class="page-footer-item">
             <ul class="social-media">
-                <li class="social-media-item"><a class="twitter" href="#">Твиттер</a></li>
-                <li class="social-media-item"><a class="facebook" href="#">Фейсбук</a></li>
-                <li class="social-media-item"><a class="youtube" href="#">Ютуб</a></li>
+                <li class="social-media-item"><a class="twitter" href="#" aria-label="Vkontakte social network">Твиттер</a></li>
+                <li class="social-media-item"><a class="facebook" href="#" aia-label="Facebook social network">Фейсбук</a></li>
+                <li class="social-media-item"><a class="youtube" href="#" aria-label="Youtube video hosting">Ютуб</a></li>
             </ul>
         </div>
         <div class="page-footer-item">
             <p class="copyright-text">website by</p>
             <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-copyright.svg" width="150" height="100" alt="Логотип HTML academy">
+                <img src="img/logo-copyright.svg" width="150" height="100" alt="Логотип HTML academy">
             </a>
         </div>
     </footer>
-    <section class="Modal-window">
+    <section class="booking-modal-window">
         <h3 class="visually-hidden">Форма</h3>
-        <!--Тут будет модальное окно-->
+        <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label for="booking-in-date">Дата заезда:</label>
+                <input class="booking-input" type="text" id="booking-in-date" name="booking-in">
+                <button class="calendar-icon" aria-label="select the date of arrival in the calendar">Иконка календаря</button>
+            </p>
+            
+            <p>
+                <label for="booking-out-date">Дата выезда:</label>
+                <input class="booking-input" type="text" id="booking-out-date" name="booking-out">
+                <button class="calendar-icon" aria-label="select the date of departure in the calendar">Иконка календаря</button>
+            </p>
+            <p>
+                <label for="count-adults">Взрослые:</label>
+                <button class="minus minus-adults" aria-label="reduce the number of adults">-</button>
+                <input class="count-input" type="text" id="count-adults" name="adults">
+                <button class="plus plus-adults" aria-label="increase the number of adults">+</button>
+            
+                <label for="count-children">Дети:</label>
+                <button class="minus minus-children" aria-label="reduce the number of childen">-</button>
+                <input class="count-input" type="text" id="count-children" name="children">
+                <button class="plus plus-children" aria-label="increase the number of adults">+</button>
+            </p>
+            <button class="search" type="submit" name="find" aria-label="find hotel">Найти</button>
+        </form>
     </section>
 </body>
 
