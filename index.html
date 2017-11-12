@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
 </head>
-
 <body>
+   
     <header class="page-header">
         <nav class="main-navigation">
             <a class="main-logo">
@@ -20,7 +20,6 @@
             </ul>
         </nav>
     </header>
-
 
     <main class="container">
         <div class="background-img">Картинка с горами
@@ -42,7 +41,6 @@
                     <img src="img/reasons-img.jpg" alt="Изображение1" width="66">
                 </li>
             </ul>
-
             <ul class="features-list">
                 <li class="features-item">
                     <h3 class="features-title">Жилье</h3>
@@ -57,7 +55,6 @@
                     <p class="features-text">Не только китайского, но и местного производства!</p>
                 </li>
             </ul>
-
             <ul class="reasons-list">
                 <li class="reasons-item">
                     <h3 class="reasons-title">Там есть мост дьявола</h3>
@@ -83,65 +80,65 @@
                     <p class="reasons-text">Большинство едет в гранд каньон и толпится там</p>
                 </li>
             </ul>
-
         </section>
         <section class="booking">
             <h3 class="booking-title">Заинтересовались?</h3>
             <p class="booking-text">Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
-            <button class="booking-button">Поиск гостиницы в седоне</button>
+            <button class="booking-btn">Поиск гостиницы в седоне</button>
             <div class="bottom-map-block">
                 <img src="img/map.png" alt="Карта" width="100">
             </div>
         </section>
-
     </main>
+    
     <footer class="page-footer">
         <div class="page-footer-item">
             <p class="hashtag">#visitsedona</p>
         </div>
         <div class="page-footer-item">
             <ul class="social-media">
-                <li class="social-media-item"><a class="twitter" href="#" aria-label="Vkontakte social network">Твиттер</a></li>
-                <li class="social-media-item"><a class="facebook" href="#" aia-label="Facebook social network">Фейсбук</a></li>
-                <li class="social-media-item"><a class="youtube" href="#" aria-label="Youtube video hosting">Ютуб</a></li>
+                <li class="social-media-item"><a class="twitter" href="#" aria-label="Vkontakte social network"></a></li>
+                <li class="social-media-item"><a class="facebook" href="#" aria-label="Facebook social network"></a></li>
+                <li class="social-media-item"><a class="youtube" href="#" aria-label="Youtube video hosting"></a></li>
             </ul>
         </div>
         <div class="page-footer-item">
             <p class="copyright-text">website by</p>
-            <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="html academy courses">
                 <img src="img/logo-copyright.svg" width="150" height="100" alt="Логотип HTML academy">
             </a>
         </div>
     </footer>
-    <section class="booking-modal-window">
+    
+    <section class="booking-modal">
         <h3 class="visually-hidden">Форма</h3>
         <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
-                <label for="booking-in-date">Дата заезда:</label>
+                <label class="booking-value" for="booking-in-date">Дата заезда:</label>
                 <input class="booking-input" type="text" id="booking-in-date" name="booking-in">
-                <button class="calendar-icon" aria-label="select the date of arrival in the calendar">Иконка календаря</button>
+                <button class="calendar-icon-btn" aria-label="select the date of arrival in the calendar"></button>
             </p>
             
             <p>
-                <label for="booking-out-date">Дата выезда:</label>
+                <label class="booking-value" for="booking-out-date">Дата выезда:</label>
                 <input class="booking-input" type="text" id="booking-out-date" name="booking-out">
-                <button class="calendar-icon" aria-label="select the date of departure in the calendar">Иконка календаря</button>
+                <button class="calendar-icon-btn" aria-label="select the date of departure in the calendar"></button>
             </p>
             <p>
-                <label for="count-adults">Взрослые:</label>
-                <button class="minus minus-adults" aria-label="reduce the number of adults">-</button>
+                <label class="booking-value" for="count-adults">Взрослые:</label>
+                <button class="minus-btn minus-adults-btn" aria-label="reduce the number of adults">-</button>
                 <input class="count-input" type="text" id="count-adults" name="adults">
-                <button class="plus plus-adults" aria-label="increase the number of adults">+</button>
+                <button class="plus-btn plus-adults-btn" aria-label="increase the number of adults">+</button>
             
-                <label for="count-children">Дети:</label>
-                <button class="minus minus-children" aria-label="reduce the number of childen">-</button>
+                <label class="booking-value" for="count-children">Дети:</label>
+                <button class="minus-btn minus-children-btn" aria-label="reduce the number of childen">-</button>
                 <input class="count-input" type="text" id="count-children" name="children">
-                <button class="plus plus-children" aria-label="increase the number of adults">+</button>
+                <button class="plus-btn plus-children-btn" aria-label="increase the number of adults">+</button>
             </p>
-            <button class="search" type="submit" name="find" aria-label="find hotel">Найти</button>
+            <button class="search-btn" type="submit" name="find">Найти</button>
         </form>
     </section>
+    
 </body>
-
 </html>
