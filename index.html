@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
    
@@ -112,7 +115,7 @@
     </footer>
     
     <section class="booking-modal">
-        <h3 class="visually-hidden">Форма</h3>
+        <h3 class="visually-hidden">Форма бронирования отеля</h3>
         <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
                 <label class="booking-value" for="booking-in-date">Дата заезда:</label>
@@ -127,14 +130,14 @@
             </p>
             <p>
                 <label class="booking-value" for="count-adults">Взрослые:</label>
-                <button class="minus-btn minus-adults-btn" aria-label="reduce the number of adults">-</button>
+                <button class="booking-value-btn minus-adults-btn" aria-label="reduce the number of adults">-</button>
                 <input class="count-input" type="text" id="count-adults" name="adults">
-                <button class="plus-btn plus-adults-btn" aria-label="increase the number of adults">+</button>
+                <button class="booking-value-btn plus-adults-btn" aria-label="increase the number of adults">+</button>
             
                 <label class="booking-value" for="count-children">Дети:</label>
-                <button class="minus-btn minus-children-btn" aria-label="reduce the number of childen">-</button>
+                <button class="booking-value-btn minus-children-btn" aria-label="reduce the number of childen">-</button>
                 <input class="count-input" type="text" id="count-children" name="children">
-                <button class="plus-btn plus-children-btn" aria-label="increase the number of adults">+</button>
+                <button class="booking-value-btn plus-children-btn" aria-label="increase the number of adults">+</button>
             </p>
             <button class="search-btn" type="submit" name="find">Найти</button>
         </form>
