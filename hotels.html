@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
    
@@ -21,7 +24,7 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main class="hotel-container">
         <h1 class="visually-hidden">Выбор гостиницы</h1>
         <section class="hotel-filter">
             <h2 class="visually-hidden">Фильтр</h2>
@@ -30,7 +33,7 @@
                         <legend class="filter-legend">Инфраструктура:</legend>
                             <ul class="filter-list">
                                 <li class="filter-item">
-                                    <input class="filter-checkbox" type="checkbox" name="pool" id="pool-checkbox">
+                                    <input class="filter-checkbox" type="checkbox" name="pool" id="pool-checkbox" checked>
                                     <label for="pool-checkbox">Бассейн</label>
                                 </li>
                                 <li class="filter-item">
@@ -47,15 +50,15 @@
                         <legend class="filter-legend">Тип жилья:</legend>
                             <ul class="filter-list">
                                 <li class="filter-item">
-                                    <input class="filter-checkbox" type="checkbox" name="hotel" id="hotel-checkbox">
+                                    <input class="filter-checkbox" type="checkbox" name="hotel" id="hotel-checkbox" checked>
                                     <label for="hotel-checkbox">Гостиница</label>
                                 </li>
                                 <li class="filter-item">
-                                    <input class="filter-checkbox" type="checkbox" name="motel" id="motel-checkbox">
+                                    <input class="filter-checkbox" type="checkbox" name="motel" id="motel-checkbox" checked>
                                     <label for="motel-checkbox">Мотель</label>
                                 </li>
                                 <li class="filter-item">
-                                    <input class="filter-checkbox" type="checkbox" name="apartament" id="apartament-checkbox">
+                                    <input class="filter-checkbox" type="checkbox" name="apartament" id="apartament-checkbox" checked>
                                     <label for="apartament-checkbox">Апартаменты</label>
                                 </li>
                             </ul>
@@ -78,23 +81,25 @@
                 <p class="hotel-sort-text">Сортировка:</p>
                 <ul class="hotel-sort-parameters">
                     <li class="hotel-sort-item hotel-sort-item-current">
-                        <button class="sort-option-btn">По цене</button>
+                        <a class="sort-option" href="#">По цене</a>
                     </li>
                     <li class="hotel-sort-item">
-                        <button class="sort-option-btn">По типу</button>
+                        <a class="sort-option" href="#">По типу</a>
                     </li>
                     <li class="hotel-sort-item">
-                        <button class="sort-option-btn">По рейтингу</button>
+                        <a class="sort-option" href="#">По рейтингу</a>
                     </li>
                 </ul>
-                <button class="sort-up-btn" aria-label="sort by descending"></button>
-                <button class="sort-down-btn" aria-label="sort by ascending"></button>
+                <a class="sort-up" aria-label="sort by descending" href="#"></a>
+                <a class="sort-down" aria-label="sort by ascending" href="#"></a>
             </div>
                 <ul class="hotel-list">
                     <li class="hotel-item">
-                        <h3 class="hotel-item-title">amara resort & spa</h3>
+                        <h3 class="hotel-item-title">
+                            <a href="#">amara resort & spa</a>
+                        </h3>
                         <p class="hotel-photo">
-                            <img src="img/hotel-amara.jpg" width="130" height="100" alt="Гостиница Amara">
+                            <img src="img/hotel-amara.jpg" alt="Гостиница Amara">
                         </p>
                         <p class="hotel-type">Гостиница</p>
                         <p class="hotel-price">от 4000р.</p>
@@ -104,9 +109,11 @@
                         <p class="rating">Рейтинг: 8,5</p>
                     </li>
                     <li class="hotel-item">
-                        <h3 class="hotel-item-title">Desert qual inn</h3>
+                        <h3 class="hotel-item-title">
+                            <a href="#">Desert qual inn</a>
+                        </h3>
                         <p class="hotel-photo">
-                            <img src="img/hotel-desert.jpg" width="130" height="100" alt="Мотель Desert Quail">
+                            <img src="img/hotel-desert.jpg"  alt="Мотель Desert Quail">
                         </p>
                         <p class="hotel-type">Мотель</p>
                         <p class="hotel-price">от 3000р.</p>
@@ -116,9 +123,11 @@
                         <p class="rating">Рейтинг: 8,9</p>
                     </li>
                     <li class="hotel-item">
-                        <h3 class="hotel-item-title">Villas at poco diablo</h3>
+                        <h3 class="hotel-item-title">
+                            <a href="#">Villas at poco diablo</a>
+                        </h3>
                         <p class="hotel-photo">
-                            <img src="img/hotel-diablo.jpg" width="130" height="100" alt="Апартаменты Villas at poco diablo">
+                            <img src="img/hotel-diablo.jpg" alt="Апартаменты Villas at poco diablo">
                         </p>
                         <p class="hotel-type">Апортаменты</p>
                         <p class="hotel-price">от 2000р.</p>
@@ -137,9 +146,9 @@
         </div>
         <div class="page-footer-item">
             <ul class="social-media">
-                <li class="social-media-item"><a class="twitter" href="#" aria-label="Vkontakte social network"></a></li>
-                <li class="social-media-item"><a class="facebook" href="#" aria-label="Facebook social network"></a></li>
-                <li class="social-media-item"><a class="youtube" href="#" aria-label="Youtube video hosting"></a></li>
+                <li class="social-media-item"><a class="twitter" href="#" aria-label="twitter social network"></a></li>
+                <li class="social-media-item"><a class="facebook" href="#" aria-label="facebook social network"></a></li>
+                <li class="social-media-item"><a class="youtube" href="#" aria-label="youtube video hosting"></a></li>
             </ul>
         </div>
         <div class="page-footer-item">

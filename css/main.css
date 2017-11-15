@@ -1,5 +1,8 @@
+/*Как по мне я сделал не очень хорошо, работать и работать еще над css.
+но как говорится "это мой первый раз, не судите строго" (с) D: */
+
 body {
-    margin: 0;
+    margin: 0px 40px;
     padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
@@ -8,6 +11,7 @@ body {
     text-transform: uppercase;
     background-color: #ffffff;
     background-position: center;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -20,14 +24,27 @@ a {
     color: #000000;
 }
 
-.main-logo {
-	background-image: url("../img/logo.png");
-}
 ul {
     list-style: none;
 }
 
-.menu a{
+.menu-item:nth-of-type(1) {
+	text-align: left;
+}
+
+.menu-item:nth-of-type(2) {
+    text-align: left;
+}
+.menu-item:nth-of-type(3) {
+    text-align: right;
+}
+
+.menu-item:nth-of-type(4) {
+    text-align: right;
+}
+
+.menu a {
+    
     color: #000000;
 }
 
@@ -36,14 +53,20 @@ ul {
     color: #81b3d2; 
 }
 
+.menu a:active {
+    color: rgba(0,0,0,0.3);
+}
+
 .background-img {
+    width: 1200px;
+    height: 800px;  
     background-color: #ffffff;
     background-image: 
         url("../img/Welcome.png"),
-        url("../img/background.jpg"),
-        url("../img/shape.png");
-    background-position: 50% 50%;
+        url("../img/shape.png"),
+        url("../img/background.jpg");
     background-repeat: no-repeat;
+    
 }
 
 .reasons-intro-title {
@@ -60,4 +83,400 @@ ul {
     text-align: center;
 }
 
+.reasons-item:nth-child(1) {
+    width: 400px;
+    height: 256px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #81b3d2;
+}
 
+.reasons-item:nth-child(3) {
+    width: 400px;
+    height: 256px;
+    background-color: #f2f2f2;
+}
+
+.reasons-item:nth-child(4) {
+    width: 400px;
+    height: 256px;
+    background-color: #f2f2f2;
+}
+
+.reasons-item:nth-child(5) {
+    width: 400px;
+    height: 256px;
+    background-color: #f2f2f2;
+}
+
+.container {
+    text-align: center;
+}
+
+.reasons-title {
+    font-size: 21px;
+}
+
+.photocard {
+	width: 800px;
+    height: 400px;
+}
+
+
+.features-title {
+	font-size: 21px;
+    
+}
+
+.booking-title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.booking-text {
+	line-height: 24px;
+    text-align: center;
+}
+
+.booking-btn {
+    font-family: inherit;
+    display: block;
+    width: 568px;
+    height: 86px;
+    margin-left: 316px;
+    margin-right: 316px;
+    background-color: #766357;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0px;
+}
+
+.booking-btn:hover,
+.booking-btn:focus {
+    background-color: #604e43;
+	
+}
+
+.booking-btn:active {
+	background-color: #503e33;
+    color: rgba(255,255,255,0.3);
+}
+.bottom-map-block {
+	width: 1718px;
+    height: 748px;
+    
+}
+
+.hashtag {
+	font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.social-media-item {
+	width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+}
+
+/*соц сети сделать не  выходит*/
+.twitter {
+    background-image: url("../img/twitter.svg");
+    background-repeat: no-repeat;
+}
+
+.facebook {
+    background-image: url("../img/fb-icon.svg");
+    background-repeat: no-repeat;
+}
+
+.youtube {
+    background-image: url("../img/youtube.svg");
+    background-repeat: no-repeat;
+}
+
+.copyright-text {
+	line-height: 26px;
+}
+
+.booking-modal {
+    width: 568px;
+    height: 395px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.booking-value {
+	line-height: 26px;
+    font-weight: bold;
+}
+
+.booking-input {
+    width: 346px;
+    height: 38px;
+    border: 0px;
+    background-color: #f2f2f2;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.booking-input:hover {
+	background-color: #ebebeb;
+}
+
+.booking-input:focus {
+	background-color: #ffffff;
+}
+
+/*с изменением цвета svg картинок при наведении тоже пока беда*/
+.calendar-icon-btn {
+    width: 21px;
+    height: 22px;
+	background-image: url("../img/calendar.svg");
+    background-color: rgba(255,255,255,1);
+    border: 0px;
+}
+
+.booking-value-btn {
+	border: 0px;
+    background-color: rgba(255,255,255,1);
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.count-input {
+	width: 114px;
+    height: 38px;
+    background-color: #f2f2f2;
+    line-height: 26px;
+    font-weight: bold;
+    border: 0px;
+}
+
+.count-input:hover {
+	background-color: #ebebeb;
+}
+
+.count-input:focus {
+    border: 2px solid lightgray;
+    background-color: #ffffff;
+}
+
+.search-btn {
+    font-family: inherit;
+    width: 458px;
+    height: 58px;
+	background-color: #81b3d2;
+    color: #ffffff;
+    text-align: center;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0px;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+    background-color: #669ec0;
+	
+}
+
+.search-btn:active {
+    background-color: #5496bd;
+	color: rgba(255,255,255,0.3);
+}
+
+/*Hotel Page*/
+
+.menu-item-current a{
+	color: #766357;
+}
+
+.hotel-filter {
+    background-image: url("../img/filter-background.jpg");
+    background-repeat: no-repeat;
+}
+
+.filter-form-fieldset {
+	color: #ffffff;
+    border: 0px;
+}
+
+.filter-legend {
+	font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+/* не работают чекбоксы, не понимаю как их cделать,чтоб убрать старые и 
+поменять на svg картинку..весь гугл облазил так и не сделал*/
+.filter-checkbox {
+	display: none;
+}
+
+.filter-checkbox::before {
+    content: "";
+    display: inline-block;
+	width: 27px;
+    height: 23px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    border: 0px;
+}
+
+.filter-checkbox:checked {
+    width: 27px;
+    height: 23px;
+	background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    border: 0px;
+}
+
+.filter-item label {
+    color: #ffffff;
+}
+
+.show-hotels-btn {
+    font-family: inherit;
+	width: 133px;
+    height: 32px;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.show-hotels-btn:hover,
+.show-hotels-btn:focus {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.hotel-sort-title {
+	font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.hotel-sort-text {
+	font-size: 12px;
+    line-height: 18px;
+}
+
+.hotel-sort-item a {
+    font-size: 12px;
+    line-height: 18px;
+	color: rgba(0,0,0,0.3);
+    border-bottom: 1px dotted #81b3d2;
+}
+
+.hotel-sort-item:hover a,
+.hotel-sort-item:focus a {
+	color: #81b3d2;
+}
+
+.hotel-sort-item-current a {
+	color: #81b3d2;
+    border: 0px;
+}
+
+.hotel-sort-item:active a {
+    color: #000000;
+    border: 0px;
+	
+}
+
+/* не видно стрелочек*/
+.sort-up {
+    width: 11px;
+    height: 10px;
+    background-image: url("../img/icon-up-dir.svg");
+    background-repeat: no-repeat;
+}
+
+.sort-down {
+    width: 11px;
+    height: 10px;
+    background-image: url("../img/icon-down-dir.svg");
+    background-repeat: no-repeat;
+}
+
+/*знаю что линии между отелями не так делается, набросал по быстрому*/
+.hotel-item {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.hotel-item-title {
+	font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.hotel-item-title a {
+    color: #000000;
+}
+
+.hotel-item-title a:hover {
+    color: #81b3d2;
+}
+
+.hotel-item-title a:active {
+	color: rgba(0,0,0,0.3);
+}
+
+.hotel-photo {
+    widows: 135px;
+    height: 90px;
+}
+
+/*проблемки с оформлением этой ссылки*/
+.hotel-more-information a {
+	width: 127px;
+    height: 27px;
+    background-color: #81b3d2;
+    border: 0px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.book-it-btn {
+    font-family: inherit;
+	width: 142px;
+    height: 27px;
+    background-color: #766357;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0px;
+}
+
+.book-it-btn:hover,
+.book-it-btn:focus {
+    background-color: #604e43;
+}
+
+.book-it-btn:active {
+    background-color: #503e33;
+    color: rgba(255,255,255,0.3);
+}
+
+.stars {
+	background-image: url("../img/star.svg");
+    background-repeat: no-repeat;
+}
+
+.rating {
+	width: 110px;
+    height: 27px;
+    background-color: #f2f2f2;
+    color: #666666;
+    text-align: center;
+}
