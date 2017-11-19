@@ -1,8 +1,7 @@
-/*Как по мне я сделал не очень хорошо, работать и работать еще над css.
-но как говорится "это мой первый раз, не судите строго" (с) D: */
-
 body {
-    margin: 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
@@ -11,7 +10,7 @@ body {
     text-transform: uppercase;
     background-color: #ffffff;
     background-position: center;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    
 }
 
 a {
@@ -19,13 +18,17 @@ a {
 }
 
 .main-navigation {
-    font-size: 14px;
     font-weight: bold;
     color: #000000;
 }
 
 ul {
     list-style: none;
+}
+
+.main-logo {
+    width: 138px;
+    height: 70px;
 }
 
 .menu-item:nth-of-type(1) {
@@ -43,74 +46,56 @@ ul {
     text-align: right;
 }
 
-.menu a {
-    
+.menu-item a {
     color: #000000;
 }
 
-.menu a:hover,
-.menu a:focus {
+.menu-item a:hover,
+.menu-item a:focus {
     color: #81b3d2; 
 }
 
-.menu a:active {
+.menu-item a:active {
     color: rgba(0,0,0,0.3);
 }
 
-.background-img {
+.background-img img{
+    background-color: #fff;
     width: 1200px;
-    height: 800px;  
-    background-color: #ffffff;
-    background-image: 
-        url("../img/Welcome.png"),
-        url("../img/shape.png"),
-        url("../img/background.jpg");
-    background-repeat: no-repeat;
-    
+	
+}
+
+.container {
+    text-align: center;
 }
 
 .reasons-intro-title {
 	font-size: 21px;
     line-height: 26px;
     font-weight: bold;
-    text-align: center;
 }
 
 .reasons-intro-text {
 	font-size: 14px;
     line-height: 26px;
     font-weight: 400;
-    text-align: center;
 }
 
 .reasons-item:nth-child(1) {
-    width: 400px;
-    height: 256px;
     color: #ffffff;
-    text-align: center;
     background-color: #81b3d2;
 }
 
 .reasons-item:nth-child(3) {
-    width: 400px;
-    height: 256px;
     background-color: #f2f2f2;
 }
 
 .reasons-item:nth-child(4) {
-    width: 400px;
-    height: 256px;
     background-color: #f2f2f2;
 }
 
 .reasons-item:nth-child(5) {
-    width: 400px;
-    height: 256px;
     background-color: #f2f2f2;
-}
-
-.container {
-    text-align: center;
 }
 
 .reasons-title {
@@ -135,7 +120,7 @@ ul {
 }
 
 .booking-text {
-	line-height: 24px;
+    line-height: 24px;
     text-align: center;
 }
 
@@ -178,30 +163,66 @@ ul {
     font-weight: bold;
 }
 
-.social-media-item {
+/*я думаю сделать svg иконки проще просто вствляя свг с fill и opacity, думаю так будет не так кривовато*/
+.social-media-item a{
+    display: inline-block;
 	width: 46px;
     height: 48px;
+    margin-right: 10px;
     background-color: #81b3d2;
-}
-
-/*соц сети сделать не  выходит*/
-.twitter {
-    background-image: url("../img/twitter.svg");
+    background-image: url("../img/sprite.svg");
+    background-position: 50px 50px;
     background-repeat: no-repeat;
 }
 
-.facebook {
-    background-image: url("../img/fb-icon.svg");
-    background-repeat: no-repeat;
+.social-media-item a:hover {
+    background-color: #669ec0;
 }
 
-.youtube {
-    background-image: url("../img/youtube.svg");
-    background-repeat: no-repeat;
+.social-media-item a:active {
+    background-color: #5496bd;
+	
+}
+
+.social-media-item .twitter {
+    background-position: -15px -5px;
+}
+
+.social-media-item .twitter:active {
+    background-position: -15px 93%;
+}
+
+.social-media-item .facebook {
+    background-position: 55% -5px;
+}
+
+.social-media-item .facebook:active {
+    background-position: 55% 90%;
+}
+
+.social-media-item .youtube {
+    background-position: 100% -3px;
+}
+
+.social-media-item .youtube:active {
+    background-position: 100% 85%;
 }
 
 .copyright-text {
 	line-height: 26px;
+}
+
+.page-footer-item img {
+    display: inline-block;
+    width: 118px;
+    height: 42px;
+    background-image: url("../img/logosprite.svg");
+    background-repeat: no-repeat;
+    background-position: 10px 63px;
+}
+
+.page-footer-item img:hover {
+    background-position: 5px 70px;
 }
 
 .booking-modal {
@@ -229,10 +250,10 @@ ul {
 }
 
 .booking-input:focus {
+    outline: 2px solid lightgray;
 	background-color: #ffffff;
 }
 
-/*с изменением цвета svg картинок при наведении тоже пока беда*/
 .calendar-icon-btn {
     width: 21px;
     height: 22px;
@@ -262,7 +283,7 @@ ul {
 }
 
 .count-input:focus {
-    border: 2px solid lightgray;
+    outline: 2px solid lightgray;
     background-color: #ffffff;
 }
 
@@ -278,6 +299,7 @@ ul {
     font-weight: bold;
     text-transform: uppercase;
     border: 0px;
+    cursor: pointer;
 }
 
 .search-btn:hover,
@@ -314,9 +336,7 @@ ul {
 }
 
 
-/* не работают чекбоксы, не понимаю как их cделать,чтоб убрать старые и 
-поменять на svg картинку..весь гугл облазил так и не сделал*/
-.filter-checkbox {
+/* чекбоксы еще не доделал*/
 	display: none;
 }
 
@@ -351,6 +371,7 @@ ul {
     border-radius: 2px;
     color: #ffffff;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .show-hotels-btn:hover,
@@ -393,8 +414,8 @@ ul {
 	
 }
 
-/* не видно стрелочек*/
 .sort-up {
+    display: inline-block;
     width: 11px;
     height: 10px;
     background-image: url("../img/icon-up-dir.svg");
@@ -402,16 +423,20 @@ ul {
 }
 
 .sort-down {
+    display: inline-block;
     width: 11px;
     height: 10px;
     background-image: url("../img/icon-down-dir.svg");
     background-repeat: no-repeat;
 }
 
-/*знаю что линии между отелями не так делается, набросал по быстрому*/
+/*c линиями тоже небольшие трабы, если убрать паддинг - это не помогает*/
 .hotel-item {
     border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+}
+
+.hotel-item:last-of-type {
+	border-bottom: 1px solid lightgray;
 }
 
 .hotel-item-title {
@@ -437,14 +462,15 @@ ul {
     height: 90px;
 }
 
-/*проблемки с оформлением этой ссылки*/
 .hotel-more-information a {
+    display: inline-block;
 	width: 127px;
     height: 27px;
     background-color: #81b3d2;
     border: 0px;
     color: #ffffff;
     font-weight: bold;
+    text-align: center;
 }
 
 .book-it-btn {
@@ -456,6 +482,7 @@ ul {
     font-weight: bold;
     text-transform: uppercase;
     border: 0px;
+    cursor: pointer;
 }
 
 .book-it-btn:hover,
@@ -468,7 +495,9 @@ ul {
     color: rgba(255,255,255,0.3);
 }
 
-.stars {
+.stars-item {
+    width: 18px;
+    height: 17px;
 	background-image: url("../img/star.svg");
     background-repeat: no-repeat;
 }
