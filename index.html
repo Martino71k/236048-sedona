@@ -13,7 +13,7 @@
     <header class="page-header">
         <nav class="main-navigation">
             <a class="main-logo" href="#">
-                <img src="img/logo.png" alt="Логотип Седона">
+                <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
             </a>
             <ul class="menu">
                 <li class="menu-item"><a href="info.html">Информация</a></li>
@@ -25,8 +25,8 @@
     </header>
 
     <main class="container">
-        <div class="background-img">
-            <img src="/img/background.jpg" alt="Фоновое изображение">
+        <div class="promo">
+            <img src="img/background.jpg" width="1200" height="773" alt="Фоновое изображение">
         </div>
         <section class="about-city">
             <h1 class="visually-hidden">Город Седона</h1>
@@ -42,7 +42,7 @@
                     <p class="reasons-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
                 </li>
                 <li class="photocard">
-                    <img src="img/reasons-img.jpg" alt="Изображение1">
+                    <img src="img/reasons-img.jpg" width="800" height="401" alt="Изображение1">
                 </li>
             </ul>
             <ul class="features-list">
@@ -66,7 +66,7 @@
                     <p class="reasons-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                 </li>
                 <li class="photocard">
-                    <img src="img/reasons-img(2).jpg" alt="Изображение2">
+                    <img src="img/reasons-img(2).jpg" width="800" height="400" alt="Изображение2">
                 </li>
                 <li class="reasons-item">
                     <h3 class="reasons-title">Небольшая площадь</h3>
@@ -90,7 +90,7 @@
             <p class="booking-text">Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
             <button class="booking-btn">Поиск гостиницы в седоне</button>
             <div class="bottom-map-block">
-                <img src="img/map.png" alt="Карта">
+                <img src="img/map.png" width="1200" height="473" alt="Карта">
             </div>
         </section>
     </main>
@@ -109,7 +109,7 @@
         <div class="page-footer-item">
             <p class="copyright-text">website by</p>
             <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="html academy courses">
-                <img src="img/logo-copyright.svg" alt="Логотип HTML academy">
+                <img src="img/logo-copyright.svg" width="115" height="41" alt="Логотип HTML academy">
             </a>
         </div>
     </footer>
@@ -120,24 +120,24 @@
             <p>
                 <label class="booking-value" for="booking-in-date">Дата заезда:</label>
                 <input class="booking-input" type="text" id="booking-in-date" name="booking-in">
-                <button class="calendar-icon-btn" aria-label="select the date of arrival in the calendar"></button>
+                <button type="button" class="calendar-icon-btn" aria-label="select the date of arrival in the calendar"></button>
             </p>
             
             <p>
                 <label class="booking-value" for="booking-out-date">Дата выезда:</label>
                 <input class="booking-input" type="text" id="booking-out-date" name="booking-out">
-                <button class="calendar-icon-btn" aria-label="select the date of departure in the calendar"></button>
+                <button type="button" class="calendar-icon-btn" aria-label="select the date of departure in the calendar"></button>
             </p>
             <p>
                 <label class="booking-value" for="count-adults">Взрослые:</label>
-                <button class="booking-value-btn minus-adults-btn" aria-label="reduce the number of adults">-</button>
+                <button type="button" class="booking-value-btn minus-adults-btn" aria-label="reduce the number of adults">-</button>
                 <input class="count-input" type="text" id="count-adults" name="adults">
-                <button class="booking-value-btn plus-adults-btn" aria-label="increase the number of adults">+</button>
+                <button type="button" class="booking-value-btn plus-adults-btn" aria-label="increase the number of adults">+</button>
             
                 <label class="booking-value" for="count-children">Дети:</label>
-                <button class="booking-value-btn minus-children-btn" aria-label="reduce the number of childen">-</button>
+                <button type="button" class="booking-value-btn minus-children-btn" aria-label="reduce the number of childen">-</button>
                 <input class="count-input" type="text" id="count-children" name="children">
-                <button class="booking-value-btn plus-children-btn" aria-label="increase the number of adults">+</button>
+                <button type="button" class="booking-value-btn plus-children-btn" aria-label="increase the number of adults">+</button>
             </p>
             <button class="search-btn" type="submit" name="find">Найти</button>
         </form>
