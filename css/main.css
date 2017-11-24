@@ -13,6 +13,12 @@ body {
     
 }
 
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
 a {
     text-decoration: none;
 }
@@ -60,10 +66,18 @@ ul {
     color: rgba(0,0,0,0.3);
 }
 
-.background-img img{
+.promo img{
     background-color: #fff;
-    width: 1200px;
-	
+    width: 100%;
+}
+
+.promo img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-image: url("../img/Shape.png");
+    background-repeat: no-repeat;
+    bottom: 0;
 }
 
 .container {
@@ -82,15 +96,17 @@ ul {
     font-weight: 400;
 }
 
-.reasons-item:nth-child(1) {
+.unique-reasons-item {
     color: #fff;
     background-color: #81b3d2;
+    width: 33.3%;
 }
 
 .reasons-item:nth-child(3), 
 .reasons-item:nth-child(4), 
 .reasons-item:nth-child(5) {
     background-color: #f2f2f2;
+    margin-bottom: 58px;
 }
 
 .reasons-title,
@@ -98,15 +114,20 @@ ul {
 	font-size: 21px;
 }
 
+.reasons-item {
+	width: 33.3%;
+}
+
 .photocard {
-	width: 800px;
-    height: 400px;
+	width: 66.6%;
+    height: 256px;
 }
 
 .booking-title {
     font-size: 30px;
     line-height: 36px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .booking-text {
@@ -115,8 +136,9 @@ ul {
 }
 
 .booking-btn {
+    margin: 0 auto;
+    padding: 33px 139px;
     font-family: inherit;
-    display: block;
     width: 568px;
     background-color: #766357;
     color: #fff;
@@ -140,7 +162,7 @@ ul {
     color: rgba(255,255,255,0.3);
 }
 .bottom-map-block {
-	width: 1200px;
+	width: 100%;
 }
 
 .hashtag {
@@ -273,9 +295,10 @@ ul {
 }
 
 .search-btn {
+    margin: 0 auto;
+    padding: 21px 196px;
     font-family: inherit;
     width: 458px;
-    height: 58px;
 	background-color: #81b3d2;
     color: #fff;
     text-align: center;
@@ -349,7 +372,6 @@ ul {
 .show-hotels-btn {
     font-family: inherit;
 	width: 133px;
-    height: 32px;
     background-color: rgba(255,255,255,0);
     border: 2px solid #fff;
     border-radius: 2px;
@@ -494,7 +516,7 @@ ul {
     text-align: center;
 }
 
-/* Сетки (еще не доделаны!)*/
+/* Сетки---------------------------------------------------------------- (еще не доделаны!)*/
 .page-header {
     width: 1200px;
     /* Сетка */
@@ -502,41 +524,49 @@ ul {
     margin-bottom: 
 }
 
-.main-navigation {
-	display: flex;
-    flex-direction: row;
-}
 
-.main-logo {
-    position: absolute;
-    left: 600px;
-	justify-content: center;
-}
-
-.menu {
-	display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* Сетка */
-    outline: 2px solid;
-}
-
-.menu-item {
-    /* Сетка */
-    outline: 2px solid;
-    width: 239px;
-	padding-top: 22px;
-    padding-bottom: 22px;
-}
-.menu-item:nth-last-of-type(2) {
+.menu-item:nth-of-type(2) {
 	margin-right: 20%;
 }
 
+.main-navigation {
+	position: relative;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-logo {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 70px;
+    text-align: center;
+}
+
+.menu-item {
+	width: 20%;
+    height: 56px;
+    box-sizing: border-box;
+    padding: 18px 71px;
+}
+
+.menu-item:nth-of-type(2){
+    margin-right: 20%;
+}
+
 .reasons-intro {
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 300px;
+    margin: 0 auto;
+    width: 490px;
+}
+
+.reasons-intro-title {
+	margin-bottom: 37px;
 }
 
 .reasons-intro-text {
@@ -545,37 +575,67 @@ ul {
 
 .reasons-list {
 	display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
+.reasons-title {
+    margin: 0 auto;
+    width: 150px;
+	margin-top: 49px;
+    margin-bottom: 29px;
+}
+
+.reasons-number {
+    margin: 0 auto;
+	width: 50px;
+    margin-bottom: 29px;
+}
+
+.reasons-text {
+	width: 310px;
+    margin: 0 auto;
+}
 
 .features-list {
 	display: flex;
-    flex-direction: row;
     /* Сетка */
     outline: 2px solid red;
 }
 
 .features-item {
-    width: 400px;
-    min-height: 330px;
+    width: 33.3%;
     /* Сетка */
     outline: 2px solid;
 }
 
+.features-title {
+    margin: 0 auto;
+    margin-top: 164px;
+    margin-bottom: 30px;
+}
+
+.features-text {
+    margin: 0 auto;
+	width: 252px;
+    margin-left: 73px;
+    margin-bottom: 87px;
+}
+
 .booking-text {
     margin-bottom: 53px;
-	
-}
-.booking-btn {
-	margin: 0 auto;
-    padding: 33px 139px;
 }
 
 .page-footer {
 	display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    outline: 3px solid;
+}
+
+.page-footer-item {
+    outline: 2px solid;
+	width: 33.3%;
+    background: rgba(255,255,255,0.9);
 }
 
 .hotel-sort {
@@ -584,8 +644,50 @@ ul {
 	display: flex;
     flex-direction: row;
     justify-content: flex-start;
+
 }
 
+.hotel-sort-title {
+    margin: 0;
+    margin-top: 36px;
+	margin-left: 71px;
+    
+}
 
+.hotel-sort-text {
+    display: inline-block;
+    margin-left: 49px;
+    margin-top: 41px;
+    margin-bottom: 37px;
+    margin-right: 40px;
+}
 
+.hotel-sort-parameters {
+	display: flex;
+    flex-direction: row;
+}
 
+.hotel-sort-item {
+    margin: auto;
+    margin-top: 41px;
+    margin-right: 34px;
+}
+
+.hotel-item {
+    position: relative;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
