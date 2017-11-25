@@ -64,14 +64,22 @@
                                 </ul>
                         </fieldset>
                         <fieldset class="filter-form-fieldset">
-                            <legend class="filter-legend">Стоимость в сутки(Р):</legend>
-                            <p class="range-values">
-                                <span>От <span class="min-range">0</span></span>
-                                <span>До <span class="max-range">3000</span></span>
-                            </p>
-                            <input type="range" min="0" max="3000">
+                            <legend class="filter-range-title">Стоимость в сутки(Р):</legend>
+                                <div class="filter-range">
+                                    <div class="price-controls">
+                                        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                                        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+                                    </div>
+                                <div class="range-controls">
+                                    <div class="scale">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="range-toggle range-toggle-min"></div>
+                                    <div class="range-toggle range-toggle-max"></div>
+                                </div>
+                                    <button class="btn-transparent" type="submit">Показать</button>
+                                </div>
                         </fieldset>
-                        <button class="show-hotels-btn" type="submit">Показать</button>
                     </form>
             </section>
 
@@ -95,23 +103,29 @@
                 </div>
                 <ul class="hotel-list">
                     <li class="hotel-item">
-                        <h3 class="hotel-item-title">
-                            <a href="#">amara resort & spa</a>
-                        </h3>
                         <p class="hotel-photo">
                             <img src="img/hotel-amara.jpg" width="135" height="90" alt="Гостиница Amara">
                         </p>
-                        <p class="hotel-type">Гостиница</p>
-                        <p class="hotel-price">от 4000р.</p>
-                        <p class="hotel-more-information"><a href="amara.html">Подробнее</a></p>
-                        <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
-                        <p class="stars" tabindex="0" aria-label="four stars hotel">
-                            <span class="stars-item"></span>
-                            <span class="stars-item"></span>
-                            <span class="stars-item"></span>
-                            <span class="stars-item"></span>
-                        </p>
-                        <p class="rating">Рейтинг: 8,5</p>
+                        <div class="hotel-item-container">
+                            <div class="hotel-information">
+                                <h3 class="hotel-item-title">
+                                    <a href="#">amara resort & spa</a>
+                                </h3>
+                                <p class="hotel-type">Гостиница</p>
+                                <p class="hotel-price">от 4000р.</p>
+                                <p class="hotel-more-information"><a href="amara.html">Подробнее</a></p>
+                                <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
+                            </div>
+                            <div class="hotel-rating">
+                                <p class="stars" tabindex="0" aria-label="four stars hotel">
+                                    <span class="stars-item"></span>
+                                    <span class="stars-item"></span>
+                                    <span class="stars-item"></span>
+                                    <span class="stars-item"></span>
+                                </p>
+                                <p class="rating">Рейтинг: 8,5</p>
+                            </div>
+                        </div>
                     </li>
                     <li class="hotel-item">
                         <h3 class="hotel-item-title">
