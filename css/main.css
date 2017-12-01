@@ -9,17 +9,18 @@ body {
 }
 
 .wrapper {
+    position: relative;
     width: 1200px;
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
-a {
+.wrapper a {
     text-decoration: none;
 }
 
-ul {
+.wrapper ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -42,15 +43,15 @@ ul {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 20%;
     height: 70px;
     text-align: center;
+    vertical-align: baseline;
 }
 
 .menu-item {
     width: 20%;
     box-sizing: border-box;
-    padding: 18px 71px;
+    padding: 18px 65px;
 }
 
 .menu-item:nth-of-type(1) {
@@ -101,7 +102,6 @@ ul {
 .promo img{
     display: block;
     background-color: #fff;
-    width: 100%;
 }
 
 .container {
@@ -130,17 +130,8 @@ ul {
     font-weight: normal;
 }
 
-.unique-reasons-item {
-    color: #fff;
-    background-color: #81b3d2;
-    width: 33.3%;
-}
-
-.reasons-item:nth-child(3), 
-.reasons-item:nth-child(4), 
-.reasons-item:nth-child(5) {
+.reasons-item {
     background-color: #f2f2f2;
-    margin-bottom: 48px;
 }
 
 .reasons-list {
@@ -148,10 +139,15 @@ ul {
     flex-wrap: wrap;
 }
 
+.unique-reasons-item {
+    color: #fff;
+    background-color: #81b3d2;
+}
+
 .reasons-item {
 	width: 33.3%;
     padding-top: 45px;
-    padding-bottom: 57px;
+    padding-bottom: 56px;
 }
 
 .reasons-title,
@@ -166,7 +162,6 @@ ul {
 }
 
 .reasons-number {
-    margin: 0 auto;
     margin-bottom: 25px;
 }
 
@@ -225,8 +220,7 @@ ul {
 }
 
 .features-title {
-    margin: 0 auto;
-    margin-bottom: 24px;
+    margin-top: 0;
 }
 
 .features-text {
@@ -237,8 +231,10 @@ ul {
 .booking-title {
     font-size: 30px;
     line-height: 36px;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 10px;
 }
 
 .booking-text {
@@ -248,7 +244,7 @@ ul {
 }
 
 .booking-btn {
-    padding: 31px 139px;
+    padding: 31px 120px;
     font-family: inherit;
     width: 568px;
     background-color: #766357;
@@ -272,13 +268,23 @@ ul {
     background-color: #503e33;
     color: rgba(255,255,255,0.3);
 }
+
+/*не могу подставить карту под футер, все ломается если пытаюсь, задав position absolute карте */
+
 .bottom-map-block {
     width: 100%;
+    z-index: -1;
+}
+
+.bottom-map-block iframe{
+    position: absolute;
+    z-index: 10;
 }
 
 .page-footer {
     display: flex;
     align-items: center;
+    background-color: rgba(255,255,255,0,9);
 }
 
 .page-footer-item {
@@ -302,7 +308,12 @@ ul {
 
 .social-media-item {
     display: inline-block;
+    vertical-align: baseline;
     margin-left: 6px;
+}
+
+.social-media-item:first-of-type {
+    margin-left: 0;
 }
 
 .social-media-item a{
@@ -348,31 +359,50 @@ ul {
     height: 42px;
     vertical-align: middle;
     margin-left: 7px;
-    
 }
 
-.page-footer-item .copyright-link svg:hover path {
+.copyright-pic:hover path {
     fill: #81b3d2;
 }
 
-.page-footer-item .copyright-link svg:active path {
+.copyright-pic:active path {
     fill: #bdbbbc;
 }
 
-.booking-modal {
-    width: 568px;
+/* Форма */
+
+.booking-form {
+    position: absolute;
+	width: 460px;
+    padding: 45px 55px 55px 55px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    bottom: 200px;
+    background-color: #ffffff;
+}
+
+.form-option {
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .booking-value {
+    margin: 0;
     line-height: 26px;
     font-weight: bold;
 }
 
 .booking-input {
     width: 346px;
-    height: 38px;
+    padding: 8px;
     border: 0px;
+    box-sizing: border-box;
     background-color: #f2f2f2;
     line-height: 26px;
     font-weight: bold;
@@ -387,29 +417,110 @@ ul {
     background-color: #ffffff;
 }
 
+/* в мозиле и ие странно ведут себя иконки календаря и + - */
+
 .calendar-icon-btn {
-    width: 21px;
-    height: 22px;
-    background-image: url("../img/calendar.svg");
-    background-color: rgba(255,255,255,1);
+    position: absolute;
+    right: 2px;
+    background-color: #f2f2f2;
     border: 0px;
     cursor: pointer;
 }
 
+.calendar-pic {
+    fill: #cacaca;
+}
+
+.calendar-pic:hover path {
+    fill: #000;
+}
+
+.calendar-pic:active path {
+	fill: #81b3d2;
+}
+
 .booking-value-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
     border: 0px;
-    background-color: rgba(255,255,255,1);
+    background-color: #818181;
     line-height: 26px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.booking-value-btn:hover {
+    background-color: #000;
+}
+
+.booking-value-btn:active {
+	background-color: #81b3d2;
+}
+
+.minus-children-btn {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 2px;
+	right: 90px;
+}
+
+.plus-children-btn {
+    position: absolute;
+	right: 20px;
+    width: 10px;
+    height: 2px;
+}
+
+.plus-children-btn::after {
+    position: absolute;
+    content: "";
+    left: 4px;
+    bottom: -4px;
+    height: 10px;
+    width: 2px;
+    background-color: #818181;
+}
+
+.minus-adults-btn {
+	left: 130px;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+}
+
+.plus-adults-btn {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 200px;
+}
+
+.plus-adults-btn::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 10px;
+	left: 4px;
+    bottom: -4px;
+    background-color: #818181;
 }
 
 .count-input {
     width: 114px;
-    height: 38px;
+    box-sizing: border-box;
+    padding: 8px;
     background-color: #f2f2f2;
     line-height: 26px;
     font-weight: bold;
     border: 0px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .count-input:hover {
@@ -423,7 +534,8 @@ ul {
 
 .search-btn {
     margin: 0 auto;
-    padding: 21px 196px;
+    margin-top: 20px;
+    padding: 17px 199px;
     font-family: inherit;
     width: 458px;
     background-color: #81b3d2;
@@ -459,12 +571,11 @@ ul {
     background-repeat: no-repeat;
 }
 
-/* Флекс в разработке */
-
 .filter-form {
 	display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 25px 60px 0px 60px;
+    
 }
 
 .filter-form-fieldset {
@@ -472,7 +583,16 @@ ul {
     border: 0px;
 }
 
+
+.filter-form-fieldset:nth-child(2) {
+    margin-left: 95px;
+    margin-right: auto;
+    color: #fff;
+    border: 0px;
+}
+
 .filter-legend {
+    padding-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
@@ -480,13 +600,17 @@ ul {
 
 .filter-item {
 	padding-left: 20px;
+    padding-bottom: 25px;
 }
+
 
 .filter-item input {
     display: none;
 }
 
 .filter-item label {
+    margin: 0;
+    padding-left: 20px;
     position: relative;
     cursor: pointer;
     display: block;
@@ -497,24 +621,18 @@ ul {
     content: "";
     position: absolute;
     display: inline-block;
+    vertical-align: middle;
     width: 27px;
     height: 23px;
-    left: -30px;
+    left: -20px;
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     border: 0px;
 }
 
 .filter-checkbox:checked + label::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    width: 27px;
-    height: 23px;
-    left: -30px;
     background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
-    border: 0px;
 }
 
 .show-hotels-btn:hover,
@@ -556,25 +674,33 @@ ul {
     border: 0px;
 }
 
-.sort-up svg path,
-.sort-down svg path {
+.sort-up {
+	margin-right: 10px;
+}
+
+.sort-up-pic path,
+.sort-down-pic path {
     display: inline-block;
+    vertical-align: middle;
     fill: #cacaca;
 }
 
-.sort-up:hover svg path,
-.sort-down:hover svg path {
+.sort-up-pic:hover path,
+.sort-down-pic:hover path {
     fill: #000;
 }
 
-.sort-up:active svg path,
-.sort-down:active svg path {
+.sort-up-pic:active path,
+.sort-down-pic:active path {
     fill: #81b3d2;
 }
+
+/* считается ли это 3 уровнем вложености, если да как сделать двумя, я не знаю :( */
 
 .sort-current svg path {
     fill: #81b3d2;
 }
+
 .hotel-item {
     border-top: 1px solid lightgray;
 }
@@ -602,7 +728,7 @@ ul {
 }
 
 .hotel-photo {
-    widows: 135px;
+    width: 135px;
     height: 90px;
 }
 
@@ -614,6 +740,7 @@ ul {
     color: #fff;
     font-weight: bold;
     text-align: center;
+    vertical-align: middle;
 }
 
 .hotel-more-information a:hover {
@@ -628,7 +755,8 @@ ul {
 .book-it-btn {
     font-family: inherit;
     display: inline-block;
-    padding: 5px 17px;
+    vertical-align: middle;
+    padding: 6px 17px;
     background-color: #766357;
     color: #fff;
     font-weight: bold;
@@ -647,8 +775,13 @@ ul {
     color: rgba(255,255,255,0.3);
 }
 
+.stars {
+    margin-top: 0;
+}
+
 .stars-item {
     display: inline-block;
+    vertical-align: middle;
     width: 18px;
     height: 17px;
     background-image: url("../img/star.svg");
@@ -656,8 +789,11 @@ ul {
 }
 
 .rating {
+    margin: 0;
+    margin-top: 30px;
     display: inline-block;
-    padding: 5px 12px;
+    vertical-align: middle;
+    padding: 4px 14px;
     background-color: #f2f2f2;
     color: #666;
     text-align: center;
@@ -668,18 +804,17 @@ ul {
 .hotel-sort {
     display: flex;
     justify-content: flex-start;
-    padding-top: 38px;
-    padding-left: 71px;
-    padding-bottom: 38px;
+    padding: 26px 71px 30px 71px;
+    align-items: baseline;
 }
 
 .hotel-sort-title {
     margin: 0;
-    margin-top: -5px;
 }
 
 .hotel-sort-text {
     display: inline-block;
+    vertical-align: baseline;
     margin: 0;
     margin-left: 48px;
 }
@@ -693,14 +828,19 @@ ul {
     margin-left: 38px;
 }
 
+.sorting-arrows-block {
+	margin-left: auto;
+}
+
 .hotel-item {
     margin: 0;
-    padding: 30px 72px; 
+    padding: 30px 72px 20px 72px;; 
 }
 
 .hotel-photo {
     margin: 0;
 	display: inline-block;
+    vertical-align: baseline;
 }
 
 .hotel-item-container {
@@ -710,37 +850,42 @@ ul {
     align-items: flex-start;
 }
 
+/* тут проблема с выравниванием типа и цены на одном уровне у каждого отеля*/
+
 .hotel-type,
 .hotel-price {
     display: inline-block;
+    vertical-align: baseline;
     margin: 0 auto;
-    padding-right: 31px;
+    padding-right: 35px;
 }
 
 .hotel-more-information,
 .book-it-btn {
     display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
 }
 
 .hotel-information {
     display: inline-block;
-    width: 257px;
+    vertical-align: middle;
+    width: 270px;
+    margin-top: -3px;
     margin-right: auto;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .hotel-item-title {
     margin: 0 auto;
-    padding-bottom: 12px;
+    padding-bottom: 9px;
 }
 
 .hotel-rating {
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
 }
-
 
 /* Сложная форма by html academy */
 
