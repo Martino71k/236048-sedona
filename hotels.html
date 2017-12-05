@@ -13,7 +13,7 @@
         <header class="page-header">
             <nav class="main-navigation">
                 <a class="main-logo" href="index.html">
-                    <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
+                    <img src="img/logo.png" width="138" height="69" alt="Логотип Седона">
                 </a>
                 <ul class="menu">
                     <li class="menu-item"><a href="info.html">Информация</a></li>
@@ -64,7 +64,7 @@
                                 </ul>
                         </fieldset>
                         <fieldset class="filter-form-fieldset">
-                            <legend class="filter-range-title">Стоимость в сутки(Р):</legend>
+                            <legend class="filter-range-title">Стоимость в сутки (Р):</legend>
                                 <div class="filter-range">
                                     <div class="price-controls">
                                         <label class="min-price">от <input type="text" name="min-price" value="0"></label>
@@ -77,7 +77,7 @@
                                     <div class="range-toggle range-toggle-min"></div>
                                     <div class="range-toggle range-toggle-max"></div>
                                 </div>
-                                    <button class="btn-transparent" type="submit">Показать</button>
+                                    <button class="transparent-btn" type="submit">Показать</button>
                                 </div>
                         </fieldset>
                     </form>
@@ -104,8 +104,8 @@
                             <path fill="#231F20" d="M5.5 0L0 10h11z"/>
                         </svg>
                     </a>
-                    <a class="sort-down sort-current" aria-label="sort by ascending" href="#">
-                        <svg class="sort-down-pic" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <a class="sort-down" aria-label="sort by ascending" href="#">
+                        <svg class="sort-down-pic sort-current" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                             <path fill="#231F20" d="M5.5 10L0 0h11"/>
                         </svg>
                     </a>
@@ -121,10 +121,16 @@
                                 <h3 class="hotel-item-title">
                                     <a href="#">amara resort & spa</a>
                                 </h3>
-                                <p class="hotel-type">Гостиница</p>
-                                <p class="hotel-price">от 4000 р.</p>
-                                <p class="hotel-more-information"><a href="amara.html">Подробнее</a></p>
-                                <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
+                                <div class="hotel-parts">
+                                    <div class="left-hotel-part">
+                                        <p class="hotel-type">Гостиница</p>
+                                        <a class="hotel-more-information" href="amara.html">Подробнее</a>
+                                    </div>
+                                    <div class="right-hotel-part">
+                                        <p class="hotel-price">от 4000 р.</p>
+                                        <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="hotel-rating">
                                 <p class="stars" tabindex="0" aria-label="four stars hotel">
@@ -146,10 +152,16 @@
                                 <h3 class="hotel-item-title">
                                     <a href="#">Desert qual inn</a>
                                 </h3>
-                                <p class="hotel-type">Мотель</p>
-                                <p class="hotel-price">от 3000 р.</p>
-                                <p class="hotel-more-information"><a href="desert.html">Подробнее</a></p>
-                                <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
+                                <div class="hotel-parts">
+                                    <div class="left-hotel-part">
+                                        <p class="hotel-type">Мотель</p>
+                                        <a class="hotel-more-information" href="desert.html">Подробнее</a>
+                                    </div>
+                                    <div class="right-hotel-part">
+                                        <p class="hotel-price">от 3000 р.</p>
+                                        <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="hotel-rating">
                                 <p class="stars" tabindex="0" aria-label="three stars hotel">
@@ -170,10 +182,16 @@
                                 <h3 class="hotel-item-title">
                                     <a href="#">Villas at poco diablo</a>
                                 </h3>
-                                <p class="hotel-type">Апартаменты</p>
-                                <p class="hotel-price">от 2000 р.</p>
-                                <p class="hotel-more-information"><a href="villas.html">Подробнее</a></p>
-                                <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
+                                <div class="hotel-parts">
+                                    <div class="left-hotel-part">
+                                        <p class="hotel-type">Апартаменты</p>
+                                        <a class="hotel-more-information" href="villas.html">Подробнее</a>
+                                    </div>
+                                    <div class="right-hotel-part">
+                                        <p class="hotel-price">от 2000 р.</p>
+                                        <button class="book-it-btn" aria-label="book hotel">Забронировать</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="hotel-rating">
                                 <p class="stars" tabindex="0" aria-label="two stars hotel">

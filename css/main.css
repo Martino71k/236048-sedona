@@ -34,7 +34,6 @@ body {
 
 .menu {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .main-logo {
@@ -43,7 +42,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 70px;
+    height: 69px;
     text-align: center;
     vertical-align: baseline;
 }
@@ -51,7 +50,7 @@ body {
 .menu-item {
     width: 20%;
     box-sizing: border-box;
-    padding: 18px 65px;
+    padding: 18px 67px;
 }
 
 .menu-item:nth-of-type(1) {
@@ -132,6 +131,9 @@ body {
 
 .reasons-item {
     background-color: #f2f2f2;
+    width: 33.3%;
+    padding-top: 45px;
+    padding-bottom: 56px;
 }
 
 .reasons-list {
@@ -142,12 +144,6 @@ body {
 .unique-reasons-item {
     color: #fff;
     background-color: #81b3d2;
-}
-
-.reasons-item {
-    width: 33.3%;
-    padding-top: 45px;
-    padding-bottom: 56px;
 }
 
 .reasons-title,
@@ -162,7 +158,7 @@ body {
 }
 
 .reasons-number {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .reasons-text {
@@ -172,7 +168,10 @@ body {
 
 .photocard {
     width: 66.6%;
-    height: 256px;
+}
+
+.photocard img {
+    display: block;
 }
 
 .features-list {
@@ -225,7 +224,7 @@ body {
 
 .features-text {
     margin: 0 auto;
-    width: 252px;
+    width: 300px;
 }
 
 .booking-title {
@@ -233,7 +232,7 @@ body {
     line-height: 36px;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 50px;
+    padding-top: 53px;
     padding-bottom: 10px;
 }
 
@@ -269,27 +268,33 @@ body {
     color: rgba(255,255,255,0.3);
 }
 
-/*не могу подставить карту под футер, все ломается если пытаюсь, задав position absolute карте */
-
 .bottom-map-block {
+    position: relative;
     width: 100%;
-    z-index: -1;
 }
 
 .bottom-map-block iframe{
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 10;
 }
 
 .page-footer {
     display: flex;
     align-items: center;
-    background-color: rgba(255,255,255,0,9);
+    background-color: rgba(255,255,255,0.9);
+}
+
+.footer-index {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
 }
 
 .page-footer-item {
     width: 33.3%;
-    background: rgba(255,255,255,0.9);
     padding: 25px;
 }
 
@@ -349,11 +354,11 @@ body {
     justify-content: center;
 }
 
-.page-footer-item a {
+.copyright-link {
     align-self: center;
 }
 
-.page-footer-item .copyright-link svg {
+.copyright-link svg {
     display: inline-block;
     width: 118px;
     height: 42px;
@@ -372,30 +377,32 @@ body {
 /* Форма */
 @keyframes slide-down {
     0% {
-        transform: translatex(-50%)translateY(-100px);
+        transform: translate(-50%, -100px);
     }
     
     100% {
-        transform:translatex(-50%) translateY(0px);
+        transform: translate(-50%, 0px);
     }
     
 }
 
 .booking-form {
+    display: none;
     position: absolute;
-    width: 460px;
-    padding: 45px 55px 55px 55px;
+    width: 458px;
+    padding: 55px 55px 55px 55px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
-    bottom: 200px;
+    bottom: 215px;
     background-color: #ffffff;
     animation: slide-down 0.6s;
+    
 }
 
-.modal-close {
-    display: none;
+.modal-show {
+   display: block;
 }
 
 .form-option {
@@ -404,24 +411,48 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
+}
+
+.form-option-container {
+	display: flex;
+    justify-content: space-between;
+}
+
+.count-label {
+    margin-right: auto;
+}
+
+
+.form-count {
+    margin-right: auto;
+	width: 187px;
+}
+
+.form-count:nth-of-type(2) {
+	padding-left: 60px;
+    width: 139px;
 }
 
 .booking-value {
-    margin: 0;
+    margin-right: auto;
     line-height: 26px;
     font-weight: bold;
 }
 
 .booking-input {
     width: 346px;
-    padding: 8px;
+    padding: 6px;
     padding-right: 40px;
     border: 0px;
     box-sizing: border-box;
     background-color: #f2f2f2;
     line-height: 26px;
     font-weight: bold;
+}
+
+.booking-input::placeholder {
+    color: #000;
 }
 
 .booking-input:hover {
@@ -433,105 +464,87 @@ body {
     background-color: #ffffff;
 }
 
-
-
-/* в мозиле и ие странно ведут себя иконки календаря и + - */
-
 .calendar-icon-btn {
     position: absolute;
     right: 2px;
     background-color: rgba(255,255,255,0);
     border: 0px;
     cursor: pointer;
-}
-
-.calendar-pic {
     fill: #cacaca;
 }
 
-.calendar-pic:hover path {
+.calendar-icon-btn:hover path {
     fill: #000;
 }
 
-.calendar-pic:active path {
+.calendar-icon-btn:active path {
     fill: #81b3d2;
 }
 
 .booking-value-btn {
-    width: 20px;
-    height: 20px;
-    position: absolute;
+    width: 38px;
+    height: 38px;
     margin: 0;
     padding: 0;
     border: 0px;
-    background-color: #818181;
+    background-color: #f2f2f2;
     line-height: 26px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 23px;
+    color: #818181;
 }
 
 .booking-value-btn:hover {
-    background-color: #000;
+	color: #000;
 }
 
 .booking-value-btn:active {
-    background-color: #81b3d2;
+	color: #81b3d2;
+}
+
+.minus {
+	
+}
+
+.minus-pic:hover path,
+.plus-pic:hover path {
+    fill: #000;
+}
+
+.minus-pic:active path,
+.plus-pic:active path  {
+    fill: #81b3d2;
 }
 
 .minus-children-btn {
     position: absolute;
     display: inline-block;
     vertical-align: middle;
-    width: 10px;
-    height: 2px;
-    right: 90px;
+    padding-bottom: 6px;
+    right: 38px; 
 }
 
 .plus-children-btn {
     position: absolute;
-    right: 20px;
-    width: 10px;
-    height: 2px;
-}
-
-.plus-children-btn::after {
-    position: absolute;
-    content: "";
-    left: 4px;
-    bottom: -4px;
-    height: 10px;
-    width: 2px;
-    background-color: #818181;
+    right: -37px;
 }
 
 .minus-adults-btn {
-    left: 130px;
+    left: 112px;
     position: absolute;
-    width: 10px;
-    height: 2px;
+    padding-bottom: 6px;
 }
 
 .plus-adults-btn {
     position: absolute;
-    width: 10px;
-    height: 2px;
-    left: 200px;
-}
-
-.plus-adults-btn::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 10px;
-    left: 4px;
-    bottom: -4px;
-    background-color: #818181;
+    left: 187px;
 }
 
 .count-input {
-    width: 114px;
+    width: 38px;
     box-sizing: border-box;
-    padding: 8px;
+    padding: 6px;
     background-color: #f2f2f2;
     line-height: 26px;
     font-weight: bold;
@@ -539,6 +552,10 @@ body {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
+}
+
+.count-input::placeholder {
+	color: #000;
 }
 
 .count-input:hover {
@@ -553,9 +570,8 @@ body {
 .search-btn {
     margin: 0 auto;
     margin-top: 20px;
-    padding: 17px 199px;
+    padding: 17px 196px;
     font-family: inherit;
-    width: 458px;
     background-color: #81b3d2;
     color: #fff;
     text-align: center;
@@ -653,6 +669,16 @@ body {
     background-repeat: no-repeat;
 }
 
+.filter-checkbox:disabled:checked + label::before {
+    background-image: url("../img/checkbox-on-disabled.svg");
+    background-repeat: no-repeat;
+}
+
+.filter-checkbox:disabled + label::before {
+    background-image: url("../img/checkbox-off-disabled.svg");
+    background-repeat: no-repeat;
+}
+
 .show-hotels-btn:hover,
 .show-hotels-btn:focus {
     background-color: #fff;
@@ -698,8 +724,6 @@ body {
 
 .sort-up-pic path,
 .sort-down-pic path {
-    display: inline-block;
-    vertical-align: middle;
     fill: #cacaca;
 }
 
@@ -713,9 +737,7 @@ body {
     fill: #81b3d2;
 }
 
-/* считается ли это 3 уровнем вложености, если да как сделать двумя, я не знаю :( */
-
-.sort-current svg path {
+.sort-current path {
     fill: #81b3d2;
 }
 
@@ -750,7 +772,7 @@ body {
     height: 90px;
 }
 
-.hotel-more-information a {
+.hotel-more-information {
     display: inline-block;
     padding: 3px 17px;
     background-color: #81b3d2;
@@ -761,11 +783,11 @@ body {
     vertical-align: middle;
 }
 
-.hotel-more-information a:hover {
+.hotel-more-information:hover {
     background-color: #669ec0;
 }
 
-.hotel-more-information a:active {
+.hotel-more-information:active {
     color: rgba(255,255,255,0.3);
     background-color: #5496bd;
 }
@@ -843,7 +865,7 @@ body {
 
 .hotel-sort-item {
     margin: 0 auto;
-    margin-left: 38px;
+    margin-left: 36px;
 }
 
 .sorting-arrows-block {
@@ -852,13 +874,11 @@ body {
 
 .hotel-item {
     margin: 0;
-    padding: 30px 72px 20px 72px;; 
+    padding: 30px 72px 30px 72px; 
 }
 
 .hotel-photo {
     margin: 0;
-    display: inline-block;
-    vertical-align: baseline;
 }
 
 .hotel-item-container {
@@ -868,14 +888,10 @@ body {
     align-items: flex-start;
 }
 
-/* тут проблема с выравниванием типа и цены на одном уровне у каждого отеля*/
-
 .hotel-type,
 .hotel-price {
-    display: inline-block;
-    vertical-align: baseline;
-    margin: 0 auto;
-    padding-right: 35px;
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 .hotel-more-information,
@@ -889,21 +905,28 @@ body {
     display: inline-block;
     vertical-align: middle;
     width: 270px;
-    margin-top: -3px;
     margin-right: auto;
     padding-left: 30px;
 }
 
 .hotel-item-title {
     margin: 0 auto;
+    margin-top: -3px;
     padding-bottom: 9px;
 }
 
 .hotel-rating {
-    display: inline-block;
-    vertical-align: middle;
     text-align: right;
 }
+
+.hotel-parts {
+	display: flex;
+}
+
+.right-hotel-part{
+	padding-left: 5px;
+}
+
 
 /* Сложная форма by html academy */
 
@@ -1003,7 +1026,7 @@ body {
     left: 80%;
 }
 
-.btn-transparent {
+.transparent-btn {
     display: block;
     margin: 0 auto;
     padding: 6px 35px;
@@ -1017,7 +1040,7 @@ body {
     cursor: pointer;
 }
 
-.btn-transparent:hover {
+.transparent-btn:hover {
     color: #000000;
     background: #ffffff;
 }

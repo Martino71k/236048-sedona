@@ -6,8 +6,7 @@ var count = document.querySelector(".count-input");
 
 button.addEventListener("click", function (Event) {
     Event.preventDefault();
-    popup.classList.toggle("booking-form");
-    popup.classList.toggle("modal-close");
+    popup.classList.toggle("modal-show");
 });
 
 form.addEventListener("submit", function(Event) {
@@ -15,4 +14,4 @@ form.addEventListener("submit", function(Event) {
         Event.preventDefault();
         console.log("Нужно ввести данные");
     }
-})
+});
