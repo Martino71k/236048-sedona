@@ -101,7 +101,7 @@ body {
     display: block;
     width: 100%;
     height: 57px;
-    background-image: url("../img/Shape.png");
+    background-image: url("../img/shape.png");
     background-repeat: no-repeat;
     bottom: 0; 
     z-index: 5;
@@ -336,8 +336,6 @@ body {
 }
 
 .social-media-item {
-    display: inline-block;
-    vertical-align: baseline;
     margin-left: 6px;
 }
 
@@ -389,12 +387,10 @@ body {
 .copyright-link {
     -ms-flex-item-align: center;
         align-self: center;
-    display: inline-block;
     width: 118px;
     height: 42px;
-    vertical-align: middle;
-    margin-left: 7px;
-    padding: 10px;
+    margin-left: 2px;
+    padding: 10px 2px 1px 9px;
 }
 
 .copyright-link:hover path {
@@ -486,7 +482,6 @@ body {
 }
 
 .booking-form {
-    display: none;
     position: absolute;
     width: 458px;
     padding: 55px 55px 55px 55px;
@@ -502,6 +497,10 @@ body {
     -webkit-animation: slide-down 0.6s;
             animation: slide-down 0.6s;
     
+}
+
+.modal-hide {
+    display: none;
 }
 
 .modal-show {
@@ -703,6 +702,7 @@ body {
 .hotel-filter {
     background-image: url("../img/filter-background.jpg");
     background-repeat: no-repeat;
+    background-color: #87a6c5;
 }
 
 .filter-form {
@@ -719,8 +719,8 @@ body {
 .filter-form-fieldset {
     color: #fff;
     border: 0px;
+    
 }
-
 
 .filter-form-fieldset:nth-child(2) {
     margin-left: 95px;
@@ -736,7 +736,7 @@ body {
 
 .filter-item {
     padding-left: 20px;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
 }
 
 .filter-item label {
@@ -784,10 +784,10 @@ body {
 .filter-range {
     width: 318px;
     color: #fff;
-    text-transform: uppercase;
 }
 
 .filter-range-title {
+    color: #fff;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 16px;
@@ -908,7 +908,7 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 26px 71px 30px 71px;
+    padding: 29px 71px 30px 71px;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -990,7 +990,7 @@ body {
 
 .hotel-item {
     margin: 0;
-    padding: 30px 72px 27px 72px; 
+    padding: 30px 72px 30px 72px; 
     border-top: 1px solid lightgray;
     margin: 0;
     display: -webkit-box;
@@ -1014,7 +1014,7 @@ body {
     font-weight: bold;
     margin: 0 auto;
     margin-top: -3px;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
 }
 
 .hotel-item-title a {
@@ -1038,7 +1038,7 @@ body {
 .hotel-type,
 .hotel-price {
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 11px;
 }
 
 .hotel-more-information,
@@ -1087,7 +1087,8 @@ body {
 
 .book-it-btn {
     font-family: inherit;
-    padding: 6px 17px;
+    line-height: 21px;
+    padding: 3px 17px;
     background-color: #766357;
     color: #fff;
     font-weight: bold;
@@ -1121,10 +1122,10 @@ body {
 
 .rating {
     margin: 0;
-    margin-top: 30px;
+    margin-top: 27px;
     display: inline-block;
     vertical-align: middle;
-    padding: 4px 14px;
+    padding: 3px 14px;
     background-color: #f2f2f2;
     color: #666;
     text-align: center;
