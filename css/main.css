@@ -107,7 +107,7 @@ body {
     z-index: 5;
 }
 
-.promo img{
+.promo img {
     display: block;
 }
 
@@ -165,7 +165,7 @@ body {
 .reasons-title {
     margin: 0 auto;
     margin-bottom: 25px; 
-    width: 160px;
+    width: 155px;
 }
 
 .reasons-number {
@@ -173,8 +173,12 @@ body {
 }
 
 .reasons-text {
-    width: 310px;
+    width: 270px;
     margin: 0 auto;
+}
+
+.unique-reasons-text {
+    width: 305px;
 }
 
 .photocard {
@@ -195,7 +199,7 @@ body {
     position: relative;
     width: 33.3%;
     padding-top: 160px;
-    padding-bottom: 82px;
+    padding-bottom: 84px;
 }
 
 .features-item:nth-of-type(1)::before {
@@ -233,6 +237,7 @@ body {
 
 .features-title {
     margin-top: 0;
+    margin-bottom: 24px;
 }
 
 .features-text {
@@ -245,14 +250,14 @@ body {
     line-height: 36px;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 53px;
+    padding-top: 51px;
     padding-bottom: 10px;
 }
 
 .booking-text {
     line-height: 24px;
     text-align: center;
-    margin-bottom: 49px;
+    margin-bottom: 47px;
 }
 
 .booking-btn {
@@ -286,7 +291,7 @@ body {
     width: 100%;
 }
 
-.map-block iframe{
+.map-block iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -332,7 +337,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    
 }
 
 .social-media-item {
@@ -343,7 +347,7 @@ body {
     margin-left: 0;
 }
 
-.social-media-item a{
+.social-link {
     display: inline-block;
     width: 46px;
     height: 48px;
@@ -355,15 +359,15 @@ body {
     text-align: center;
 }
 
-.social-media-item a:hover {
+.social-link:hover {
     background-color: #669ec0;
 }
 
-.social-media-item a:active {
+.social-link:active {
     background-color: #5496bd;
 }
 
-.social-media-item a:active path {
+.social-link:active path {
     fill: rgba(255,255,255,0.3);
 }
 
@@ -372,6 +376,7 @@ body {
 }
 
 .copyright-text {
+    margin-left: 5px;
     line-height: 26px;
 }
 
@@ -389,8 +394,8 @@ body {
         align-self: center;
     width: 118px;
     height: 42px;
-    margin-left: 2px;
-    padding: 10px 2px 1px 9px;
+    margin-left: 4px;
+    padding: 2px 2px 1px 4px;
 }
 
 .copyright-link:hover path {
@@ -695,7 +700,7 @@ body {
 
 /*Hotel Page*/
 
-.menu-item-current a{
+.menu-item-current a {
     color: #766357;
 }
 
@@ -956,7 +961,7 @@ body {
     border: 0px;
 }
 
-.hotel-sort-item a:active  {
+.hotel-sort-item a:active {
     color: #000;
     border: 0px;
 }
@@ -1063,7 +1068,7 @@ body {
     display: flex;
 }
 
-.right-hotel-part{
+.right-hotel-part {
     padding-left: 5px;
 }
 
